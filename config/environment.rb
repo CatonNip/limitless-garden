@@ -14,6 +14,8 @@ require 'httparty'
 require 'dotenv'
 Dotenv.load
 
+require_relative '../lib/notifier'
+
 require 'pg'
 require 'active_record'
 require 'logger'
@@ -25,6 +27,8 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 require 'faker'
+require 'giphy'
+require 'twilio-ruby'
 
 
 # Some helper constants for path-centric logic
@@ -33,10 +37,12 @@ APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 APP_NAME = APP_ROOT.basename.to_s
 
 configure do
-  # By default, Sinatra assumes that the root is the file that calls the configure block.
-  # Since this is not the case for us, we set it manually.
+  Giphy::Configuration.configure do |config|
+    # config.version = THE_API_VERSION
+    config.api_key = 'dc6zaTOxFJmzC'
+  end
+
   set :root, APP_ROOT.to_path
-  # See: http://www.sinatrarb.com/faq.html#sessions
   enable :sessions
   set :session_secret, ENV['SESSION_SECRET'] || 'this is a secret shhhhh'
 

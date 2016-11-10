@@ -1,5 +1,3 @@
-source 'https://rubygems.org'
-
 gem 'pg'
 gem 'sinatra'
 gem 'sinatra-contrib'
@@ -11,6 +9,7 @@ gem 'shotgun'
 gem 'pry'
 gem 'awesome_print'
 gem 'faker'
+gem 'giphy'
 
 group :test do
   gem 'shoulda-matchers'
@@ -26,4 +25,5 @@ end
 group :api_helpers do
   gem 'httparty'
   gem 'dotenv'
+  gem 'twilio-ruby'
 end
