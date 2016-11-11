@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  ajaxarino();
+  // ajaxarino();
 });
 
 var ajaxarino = function() {

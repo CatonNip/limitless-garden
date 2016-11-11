@@ -16,8 +16,4 @@ helpers do
     session[:id] = nil
   end
 
-  def giphy
-  Giphy.search('husky', {limit: 1, offset: 25})
-  end
-
 end
