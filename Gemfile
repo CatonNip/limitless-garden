@@ -11,6 +11,7 @@ gem 'awesome_print'
 gem 'faker'
 gem 'giphy'
 
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

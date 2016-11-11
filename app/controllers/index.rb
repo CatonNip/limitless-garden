@@ -1,5 +1,5 @@
 get '/' do
-  p giphy
+  # p giphy
   erb :index
 end
 

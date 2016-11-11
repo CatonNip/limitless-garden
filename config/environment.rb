@@ -29,6 +29,8 @@ require 'erb'
 require 'faker'
 require 'giphy'
 require 'twilio-ruby'
+require 'awesome_print'
+
 
 
 # Some helper constants for path-centric logic
