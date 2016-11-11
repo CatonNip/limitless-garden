@@ -9,8 +9,8 @@ helpers do
     message = client.account.messages.create(
     from: twilio_number,
     to: phone_number,
-    body: "OH THE HUE-MANATEE!!!!!!!",
-    media_url: giphy_URL
+    body: giphy_URL,
+    # media_url: giphy_URL
     )
     puts "An sms notifying the last application error was "\
     "sent to #{message.to[0...-4] + "******"}"

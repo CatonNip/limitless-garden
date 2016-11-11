@@ -1,8 +1,8 @@
 get "/getgiphywithit" do
   @gif = giphy
-  URL = @gif[0].fixed_height_image.url.to_s
-  # URL = @gif[0].bitly_gif_url.to_s
-  p URL
+  # URL = @gif[0].fixed_height_image.url.to_s
+  URL = @gif[0].bitly_gif_url.to_s
+  # p URL
   send_sms_notification("+19168444156",URL)
   redirect "/"
   # if request.xhr?
